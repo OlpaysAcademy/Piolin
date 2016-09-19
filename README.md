@@ -2,16 +2,18 @@
 
 ![Piolin gordo](https://failingtherorschachtest.files.wordpress.com/2011/04/tweety-monster.jpg)
 
-#Mini Twitter
+# Mini Twitter
 
-##Funcionalidades:
+# Rutas:
 
 * Listar tweets (/tweets)
 * Crear tweets (/tweets/create)
 * Autenticacion (/login)
 * Listar followers (/followers)
 * Listar following (/following)
-* Reutilizar lógica entre listado de tweets, listado de followers y listado de following
+
+# Reutilizacion de componentes
+* Crear componente listado reutilizable para compartir lógica entre listado de tweets, listado de followers y listado de following
 
 ##Tecnologías:
 

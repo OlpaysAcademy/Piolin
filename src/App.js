@@ -1,23 +1,23 @@
-import React, { Component } from 'react';
-import logo from './logo.svg';
-import style from './App.scss';
-import { Button } from 'react-toolbox/lib/button';
+import React from 'react';
+import { Fragment, Link } from 'redux-little-router';
+import auther from './utils/auth';
 
-class App extends Component {
-  render() {
-    return (
-      <div className={style.App} >
-        <div className={style.header}>
-          <img className={style.logo} src={logo} alt="logo" />
-          <h2>Welcome to React</h2>
-        </div>
-        <p className={style.intro}>
-          To get started, edit <code>src/App.js</code> and save to reload.
-          <Button label="Gato el que lee" primary />
-        </p>
-      </div>
-    );
-  }
-}
-
+const App = () => (
+  <div>
+    <h3>Crapio</h3>
+    <button onClick={auther.getTimeline}>Crapper</button>
+    <Link href="/boop">
+      <button>To Boop</button>
+    </Link>
+    <Link href="/crap">
+      <button>To Crap</button>
+    </Link>
+    <Fragment forRoute="/boop">
+      <h2>onboop</h2>
+    </Fragment>
+    <Fragment forRoute="/crap">
+      <h2>oncrap</h2>
+    </Fragment>
+  </div>
+);
 export default App;

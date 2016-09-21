@@ -61,7 +61,10 @@
   "dependencies": {
     "react": "^15.3.2",
     "react-dom": "^15.3.2",
-    "react-toolbox": "^1.2.1"
+    "react-redux": "^4.4.5",
+    "react-toolbox": "^1.2.1",
+    "redux": "^3.6.0",
+    "redux-little-router": "^9.0.3"
   },
   "scripts": {
     "start": "node scripts/start.js",

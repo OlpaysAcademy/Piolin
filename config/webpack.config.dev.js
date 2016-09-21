@@ -103,9 +103,13 @@ module.exports = {
       // "style" loader turns CSS into JS modules that inject <style> tags.
       // In production, we use a plugin to extract that CSS to a file, but
       // in development "style" loader enables hot editing of CSS.
+
+      // The following funky line means determines the structure of teh generated classNames.
+      // For example: class="App__header___1wrze"
+      // localIdentName = [name]__[local]___[hash:base64:5]
       {
         test: /(\.scss|\.css)$/,
-        loader: 'style!css!postcss!sass'
+        loader: 'style!css?sourceMap&modules&importLoaders=1&localIdentName=[name]__[local]___[hash:base64:5]!postcss!sass'
       },
       // JSON is not enabled by default in Webpack but both Node and Browserify
       // allow it implicitly so we also enable it.
@@ -171,6 +175,9 @@ module.exports = {
         ]
       }),
     ];
+  },
+  sassLoader: {
+    data: '@import "' + paths.appSrc + '/theme/_theme.scss";'
   },
   plugins: [
     // Generates an `index.html` file with the <script> injected.

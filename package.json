@@ -37,14 +37,17 @@
     "html-loader": "0.4.3",
     "html-webpack-plugin": "2.22.0",
     "http-proxy-middleware": "0.17.1",
+    "immutability-helper": "^2.0.0",
     "jest": "15.1.1",
     "json-loader": "0.5.4",
     "node-sass": "^3.10.0",
+    "normalize.css": "^4.2.0",
     "object-assign": "4.1.0",
     "opn": "4.0.2",
     "path-exists": "3.0.0",
     "postcss-loader": "0.13.0",
     "promise": "7.1.1",
+    "react-addons-css-transition-group": "^15.3.2",
     "recursive-readdir": "2.0.0",
     "rimraf": "2.5.4",
     "sass-loader": "^4.0.2",
@@ -57,7 +60,8 @@
   },
   "dependencies": {
     "react": "^15.3.2",
-    "react-dom": "^15.3.2"
+    "react-dom": "^15.3.2",
+    "react-toolbox": "^1.2.1"
   },
   "scripts": {
     "start": "node scripts/start.js",

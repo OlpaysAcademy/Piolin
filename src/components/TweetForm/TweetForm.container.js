@@ -11,7 +11,7 @@ const mapStateToProps = () => ({})
 const mapDispatchToProps = (dispatch) => ({
     handleSubmit: ({ tweet }: { tweet: string }) => {
         dispatch(postTweet())
-        return twitter.tweet(tweet)
+        twitter.tweet(tweet)
             .then(tweet => dispatch(tweetPosted(tweet)))
             .then(() => {
                 dispatch(fetchTweets());

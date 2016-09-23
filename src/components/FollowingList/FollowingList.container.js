@@ -14,7 +14,7 @@ const mapStateToProps = ({following}: State) => {
 const mapDispatchToProps = (dispatch) => ({
     onComponentMount: () => {
         dispatch(fetchFollowing())
-        return twitter.listFollowing()
+        twitter.listFollowing()
             .then(users => dispatch(followingFetched(users)));
     }
 });

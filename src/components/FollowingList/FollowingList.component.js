@@ -3,11 +3,10 @@
 import React, { Component } from 'react';
 
 import List from '../List/';
-import type { Tweet } from '../../types';
-import FollowingItem from './FollowingItem';
+import type { User } from '../../types';
 
 type FollowingListProps = {
-    items: Tweet[],
+    items: User[],
     onComponentMount: () => void
 }
 
@@ -24,7 +23,10 @@ class FollowingList extends Component {
                 <List
                     label='Following'
                     items={this.props.items}
-                    ItemComponent={FollowingItem}
+                    getKey={item => item.id}
+                    getCaption={item => item.name}
+                    getLegend={item => `@${item.screenName}`}
+                    getAvatar={item => item.avatar}
                     />
             </div>
         )

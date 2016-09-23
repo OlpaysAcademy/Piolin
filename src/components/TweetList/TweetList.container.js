@@ -3,18 +3,24 @@ import _ from 'lodash'
 import { connect } from 'react-redux'
 
 import twitter from '../../twitter';
-import Component from './TweetList.component';
+import Component from '../List';
 import { fetchTweets, tweetsFetched } from '../../actions/tweets';
-import type {State} from '../../reducers';
+import type {State } from '../../reducers';
 
 const mapStateToProps = ({tweets}: State) => {
-    return { items: _.values(tweets.entities) };
+    return {
+        items: _.values(tweets.entities),
+        label: 'Tweets',
+        getKey: item => item.id,
+        getCaption: item => item.user,
+        getLegend: item => item.text,
+    };
 }
 
 const mapDispatchToProps = (dispatch) => ({
     onComponentMount: () => {
         dispatch(fetchTweets())
-        return twitter.listHomeTweets()
+        twitter.listHomeTweets()
             .then(tweets => dispatch(tweetsFetched(tweets)));
     }
 });

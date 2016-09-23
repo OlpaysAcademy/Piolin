@@ -1,5 +1,5 @@
 // @flow
 
-import Form from './Form.component';
+import List from './List.component';
 
-export default Form;
+export default List;

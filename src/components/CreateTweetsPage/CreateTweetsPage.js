@@ -1,13 +1,27 @@
-import React from 'react';
+import React, { Component } from 'react';
 import { Button } from 'react-toolbox/lib/button';
 import Input from 'react-toolbox/lib/input';
 
-const LoginPage = () =>
-    <div>
-        <Input type='email' label='Email address' icon='email' />
-        <Input type='password' label='Password' icon='lock' />
-        <Button primary raised onClick={() => console.log('/app/tweets') }>Login</Button>
-    </div>
-        // <Button primary raised onClick={() => store.dispatch({ type: 'ROUTER_PUSH', payload: '/app/tweets' }) }>Login</Button>
+class CreateTweetsPage extends Component {
+    constructor() {
+        super();
+        this.state = {
+            text: ''
+        }
+    }
+    tweet(text) {
+        this.props.tweet(text);
+        this.setState({ text: '' });
+        this.props.pushRoute('/app/tweets');
+    }
+    render() {
+        return (
+            <div>
+                <Input type='text' label='¿Qué está pasando?' onChange={value => this.setState({ text: value }) } />
+                <Button primary raised onClick={() => this.tweet(this.state.text) }>Twittear</Button>
+            </div>
+        );
+    }
+}
 
-export default LoginPage;
+export default CreateTweetsPage;

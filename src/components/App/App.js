@@ -37,7 +37,7 @@ let store = createStore(
     applyMiddleware(ReduxPromise),
     createStoreWithRouter({
       routes,
-      pathname: '/login'
+      pathname: window.location.pathname
     }),
     window.devToolsExtension
       ? window.devToolsExtension()

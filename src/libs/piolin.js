@@ -11,7 +11,7 @@ const pickTweetProps = tweet => _.pick(tweet, ['created_at', 'text', 'user']);
 module.exports = {
     timeline: user_id => {
         return codebird.__call(
-            'statuses_homeTimeline',
+            'statuses_userTimeline',
             {
                 user_id
             }
@@ -32,5 +32,13 @@ module.exports = {
                 user_id
             }
         ).then(response => response.reply.users.map(pickUserProps));
+    },
+    tweet: text => {
+        return codebird.__call(
+            'statuses_update',
+            {
+                status: text
+            }
+        );
     }
 };

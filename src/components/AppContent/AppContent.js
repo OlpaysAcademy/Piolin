@@ -23,9 +23,10 @@ class AppContent extends Component {
                 </Fragment>
                 <Fragment forRoute={'/app'}>
                     <Navigation type='horizontal'>
-                        <Button primary={this.props.router.result.title === 'Tweets'} onClick={() => this.props.pushRoute('/app/tweets') }>Tweets</Button>
-                        <Button primary={this.props.router.result.title === 'Following'} onClick={() => this.props.pushRoute('/app/following') }>Following</Button>
-                        <Button primary={this.props.router.result.title === 'Followers'} onClick={() => this.props.pushRoute('/app/followers') }>Followers</Button>
+                        <Button primary={this.props.router.route === '/app/tweets'} onClick={() => this.props.pushRoute('/app/tweets') }>Tweets</Button>
+                        <Button primary={this.props.router.route === '/app/following'} onClick={() => this.props.pushRoute('/app/following') }>Following</Button>
+                        <Button primary={this.props.router.route === '/app/followers'} onClick={() => this.props.pushRoute('/app/followers') }>Followers</Button>
+                        <Button primary={this.props.router.route === '/app/tweets/create'} onClick={() => this.props.pushRoute('/app/tweets/create') }>Create tweet</Button>
                     </Navigation>
                     <AbsoluteFragment forRoute={'/app/tweets'}>
                         <TweetsPage />

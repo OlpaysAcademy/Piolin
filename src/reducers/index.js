@@ -6,6 +6,8 @@ export default function app(state = {}, action) {
       return { ...state, followers: action.payload };
     case 'FETCH_FOLLOWING':
       return { ...state, following: action.payload };
+    case 'LOGIN':
+      return { ...state, isLoggedIn: true };
     default:
       return state
   }

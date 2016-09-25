@@ -8,6 +8,7 @@ import TweetsPage from '../TweetsPage';
 import CreateTweetsPage from '../CreateTweetsPage';
 import FollowingPage from '../FollowingPage';
 import FollowersPage from '../FollowersPage';
+import LoginRedirect from '../LoginRedirect';
 import style from './AppContent.scss';
 import logo from '../../logo.svg';
 
@@ -21,7 +22,10 @@ class AppContent extends Component {
                 <Fragment forRoute={'/login'}>
                     <LoginPage />
                 </Fragment>
-                <Fragment forRoute={'/app'}>
+                <Fragment forRoute={'/app'} withConditions={location => !this.props.isLoggedIn}>
+                    <LoginRedirect />
+                </Fragment>
+                <Fragment forRoute={'/app'} withConditions={location => this.props.isLoggedIn}>
                     <Navigation type='horizontal'>
                         <Button primary={this.props.router.route === '/app/tweets'} onClick={() => this.props.pushRoute('/app/tweets') }>Tweets</Button>
                         <Button primary={this.props.router.route === '/app/following'} onClick={() => this.props.pushRoute('/app/following') }>Following</Button>

@@ -3,9 +3,10 @@
 import { connect } from 'react-redux';
 import AppContent from './AppContent';
 
-const mapStateToProps = state => {
+const mapStateToProps = ({ router, isLoggedIn }) => {
     return {
-        router: state.router
+        router,
+        isLoggedIn
     };
 };
 

@@ -14,20 +14,20 @@ const routes = {
     title: 'Login'
   },
   '/app': {
-    title: 'App'
+    title: 'App',
+    '/tweets': {
+      title: 'Tweets',
+      '/create': {
+        title: 'Create Tweets'
+      },
+    },
+    '/followers': {
+      title: 'Followers'
+    },
+    '/following': {
+      title: 'Following'
+    }
   },
-  '/app/tweets': {
-    title: 'Tweets'
-  },
-  '/app/tweets/create': {
-    title: 'Create Tweets'
-  },
-  '/app/followers': {
-    title: 'Followers'
-  },
-  '/app/following': {
-    title: 'Following'
-  }
 };
 
 let store = createStore(

@@ -2,8 +2,9 @@
 
 import React, { Component } from 'react';
 import { Provider } from 'react-redux';
-import { createStore } from 'redux';
+import { createStore, compose, applyMiddleware } from 'redux';
 import { createStoreWithRouter, RouterProvider } from 'redux-little-router';
+import ReduxPromise from 'redux-promise';
 
 import AppContent from '../AppContent';
 import app from '../../reducers';
@@ -32,10 +33,16 @@ const routes = {
 let store = createStore(
   app,
   {},
-  createStoreWithRouter({
-    routes,
-    pathname: '/login'
-  })
+  compose(
+    applyMiddleware(ReduxPromise),
+    createStoreWithRouter({
+      routes,
+      pathname: '/login'
+    }),
+    window.devToolsExtension
+      ? window.devToolsExtension()
+      : f => f
+  )
 );
 
 class App extends Component {

@@ -1,3 +1,3 @@
-import FollowingPage from './FollowingPage';
+import FollowingPage from './FollowingPage.container';
 
 export default FollowingPage;

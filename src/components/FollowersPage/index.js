@@ -1,3 +1,3 @@
-import FollowersPage from './FollowersPage';
+import FollowersPage from './FollowersPage.container';
 
 export default FollowersPage;

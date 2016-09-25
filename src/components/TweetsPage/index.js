@@ -1,3 +1,3 @@
-import TweetsPage from './TweetsPage';
+import TweetsPage from './TweetsPage.container';
 
 export default TweetsPage;

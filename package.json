@@ -59,12 +59,15 @@
     "whatwg-fetch": "1.0.0"
   },
   "dependencies": {
+    "codebird": "git@github.com:jublonet/codebird-js.git#develop",
     "react": "^15.3.2",
     "react-dom": "^15.3.2",
     "react-redux": "^4.4.5",
     "react-toolbox": "^1.2.1",
     "redux": "^3.6.0",
-    "redux-little-router": "^9.0.3"
+    "redux-actions": "^0.12.0",
+    "redux-little-router": "^9.0.3",
+    "redux-promise": "^0.5.3"
   },
   "scripts": {
     "start": "node scripts/start.js",

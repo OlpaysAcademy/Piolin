@@ -64,6 +64,8 @@
     "react": "^15.3.2",
     "react-dom": "^15.3.2",
     "react-toolbox": "^1.2.1",
+    "redux-actions": "^0.12.0",
+    "redux-promise": "^0.5.3",
     "rsvp": "^3.3.2",
     "when": "^3.7.7",
     "xhr2": "^0.1.3"

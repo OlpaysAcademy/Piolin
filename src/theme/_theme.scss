@@ -2,5 +2,20 @@
 // Probá cambiar $palette-blue-500 por $palette-red-500 para cambiar el color del boton que está en App.js
 @import "node_modules/react-toolbox/lib/colors";
 
-$color-primary: $palette-blue-500;
-$color-primary-dark: $palette-blue-700;
+$color-primary: #224a71;
+$color-primary-dark: #224a71;
+$appbar-height: 50px !default;
+a {
+    text-decoration: none;
+}
+body {
+    background: #f5f5f5;
+    font-family: sans-serif;
+}
+html {
+    font-size: 75%;
+}
+
+.theme__cardTitle___3Tyrr {
+    background: blue;
+}

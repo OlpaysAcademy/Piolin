@@ -14,24 +14,42 @@ cb.setToken(
 module.exports = {
   createTweet,
   getTimeline,
+  getFollowers,
+  getFollowing,
+  getUserInfo
 };
 
 function createTweet(body) {
-    cb.__call(
+    return cb.__call(
         "statuses_update",
-        {"status": body},
-        function (reply) {
-            console.log(reply);
-        }
+        {"status": body}
     );
 }
 
 function getTimeline() {
-    cb.__call(
+    return cb.__call(
         "statuses_homeTimeline",
-        {},
-        function (reply) {
-            console.log(reply);
-        }
+        {}
+    );
+}
+
+function getFollowers() {
+    return cb.__call(
+        "followers_list",
+        {}
+    );
+}
+
+function getFollowing() {
+    return cb.__call(
+        "friends_list",
+        {}
+    );
+}
+
+function getUserInfo() {
+    return cb.__call(
+        "users_show",
+        "id=2876424203"
     );
 }

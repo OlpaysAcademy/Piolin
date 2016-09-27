@@ -9,11 +9,9 @@ export const createTweet = createAction('CREATE_TWEET', auther.createTweet);
 export const logUser = user => {
     return { type: 'LOG_USER', user }
 }
-
 export const logout = () => {
     return { type: 'LOGOUT' }
 }
-
 export const isLoading = isLoading => {
     return { type: 'IS_LOADING', isLoading }
 }

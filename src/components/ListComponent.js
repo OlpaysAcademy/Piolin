@@ -15,7 +15,7 @@ class ListComponent extends React.Component {
         const ListItem = this.props.ListItem;
         const subheader = this.props.subheader;
         const items = this.props.Data;
-        const itemElement = item => <ListItem  item={item} />
+        const itemElement = item => <ListItem item={item} />
         return (
             <div>
                 { this.props.isLoading 
@@ -28,4 +28,3 @@ class ListComponent extends React.Component {
 }
 
 export default ListComponent
-

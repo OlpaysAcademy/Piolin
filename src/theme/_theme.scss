@@ -13,9 +13,22 @@ body {
     font-family: sans-serif;
 }
 html {
-    font-size: 75%;
+    font-size: 65%;
+}
+.cardTitle div:first-child {
+    height: 110px;
+    width: 110px;
+    margin-top: -50px;
 }
 
-.theme__cardTitle___3Tyrr {
-    background: blue;
+.cardTitle div:nth-child(2) {
+    margin-top: -50px;
+}
+
+.cardTitle div:nth-child(2) > h5 {
+    font-size: 22px !important;
+}
+
+.cardTitle div:nth-child(2) > p {
+    margin-top: -40px;
 }

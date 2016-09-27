@@ -1,6 +1,7 @@
 import React from 'react';
 import { Card, CardMedia, CardTitle } from 'react-toolbox/lib/card';
 import ProgressBar from 'react-toolbox/lib/progress_bar';
+import theme from './../theme/_theme.scss';
 
 const cardStyle = {
     width: '25%',
@@ -29,7 +30,8 @@ class UserInfoComponent extends React.Component {
                   image={this.props.Data.profile_banner_url}
                 />
                 <CardTitle
-                  avatar={this.props.Data.profile_image_url}
+                  theme={theme}
+                  avatar={this.props.Data.profile_image_url.replace('_normal', '')}
                   title={this.props.Data.name}
                   subtitle={this.props.Data.description}
                   className="user-info_card"

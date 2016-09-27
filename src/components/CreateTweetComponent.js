@@ -38,7 +38,7 @@ class CreateTweet extends React.Component {
             return (
                 <div style={newTweetStyle}>
                     <form onSubmit={this.handleSubmit}>
-                        <Input ref='newTweet' label='New Tweet' type='text' onChange={this.onChange} value={this.state.newTweet} maxLength={140 }/>
+                        <Input ref='newTweet' label='New Tweet' type='text' icon='message' onChange={this.onChange} value={this.state.newTweet} maxLength={140 }/>
                         <Button type='submit' label='Create' raised primary />
                     </form>
                 </div>

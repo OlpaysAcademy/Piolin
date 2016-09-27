@@ -33,10 +33,10 @@ class Login extends React.Component {
         return (
             <div style={{textAlign: 'center'}}>
                 <img style={logoStyle} src={Logo} alt="logo" />
-                <h2 style={{color: '#224a71'}}>Piolin Minnie Twitter</h2>
+                <h2 style={{color: '#224a71'}}>Piolin</h2>
                 <form onSubmit={this.handleSubmit}>
                     <Input ref='username' label='Email' type='email' icon='email' onChange={this.onChange.bind(this, 'username')} value={this.state.username} maxLength={40 }/>
-                    <Input ref='password' label='Password' type='password' onChange={this.onChange.bind(this, 'password')} value={this.state.password} maxLength={40 }/>
+                    <Input ref='password' label='Password' type='password' icon='lock' onChange={this.onChange.bind(this, 'password')} value={this.state.password} maxLength={40 }/>
                     <Button type='submit' label='Login' raised primary />
                 </form>
             </div>

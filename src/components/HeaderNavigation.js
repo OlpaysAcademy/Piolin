@@ -9,7 +9,7 @@ const margin = {
 
 const logoStyle = {
     width: 30,
-    marginRight: 50
+    marginRight: 25
 }
 
 const navbar = {
